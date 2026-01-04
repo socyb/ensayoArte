@@ -14,6 +14,7 @@
 
 # SVG (generados, mantener solo PNG)
 *.svg
+!resumen_neodadaismo.svg
 
 # PDFs
 PDFs/
