@@ -1,6 +1,5 @@
 # Neodadaísmo y conversión cultural en la era de la IA generativa
 
-**Capítulo para libro:**
 **Autor:** Jorge Cardiel Herrera  
 **Institución:** Facultad de Contaduría y Administración, UNAM
 
