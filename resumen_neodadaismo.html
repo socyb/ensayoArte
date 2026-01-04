@@ -260,6 +260,31 @@
       opacity: 0.9;
     }
 
+    .back-home{
+      display: inline-block;
+      margin-top: 32px;
+      padding: 12px 24px;
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      color: var(--fg);
+      text-decoration: none;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: .9rem;
+      font-weight: 500;
+      transition: all .15s ease;
+    }
+
+    .back-home:hover{
+      background: var(--highlight-bg);
+      transform: translateY(-1px);
+      border-bottom-color: var(--border);
+    }
+
+    .back-home::before{
+      content: "← ";
+    }
+
     @keyframes fadeIn{
       from { opacity: 0; }
       to { opacity: 1; }
@@ -374,6 +399,9 @@
         <p class="diagram-caption">
           Figura 1. Estructura conceptual del argumento: desde el diagnóstico del dispositivo de conversión hasta las implicaciones en docencia y gestión (haz clic para ampliar)
         </p>
+      </div>
+      <div style="text-align: center;">
+        <a href="index.html" class="back-home">Volver al inicio</a>
       </div>
     </section>
   </div>
