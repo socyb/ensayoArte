@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neodadaísmo y conversión cultural en la era de la IA generativa</title>
+  <style>
+    :root{
+      --bg:#fafafa;
+      --fg:#1a1a1a;
+      --muted:#666666;
+      --border:#2c2c2c;
+      --card:#ffffff;
+      --link:#0066cc;
+      --shadow: rgba(0,0,0,.06);
+      --accent:#8E44AD;
+    }
+    html[data-theme="dark"]{
+      --bg:#0d0d0d;
+      --fg:#e8e8e8;
+      --muted:#a8a8a8;
+      --border:#e8e8e8;
+      --card:#1a1a1a;
+      --link:#5ba3ff;
+      --shadow: rgba(255,255,255,.04);
+      --accent:#a76bc5;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.75;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container{
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .card{
+      border: 2px solid var(--border);
+      background: var(--card);
+      border-radius: 12px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 20px var(--shadow);
+      text-align: center;
+    }
+
+    h1{
+      font-size: 2.2rem;
+      margin: 0 0 16px 0;
+      letter-spacing: -.015em;
+      font-weight: 600;
+      line-height: 1.2;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--accent);
+    }
+
+    .subtitle{
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 12px 0;
+      font-style: italic;
+    }
+
+    .author{
+      font-size: 1rem;
+      color: var(--fg);
+      margin: 0 0 8px 0;
+      font-weight: 500;
+    }
+
+    .institution{
+      font-size: .95rem;
+      color: var(--muted);
+      margin: 0 0 32px 0;
+    }
+
+    .notice{
+      background: var(--accent);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: .9rem;
+      margin: 0 0 32px 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .cta{
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 4px 12px rgba(142, 68, 173, .3);
+    }
+
+    .cta:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(142, 68, 173, .4);
+    }
+
+    .cta:active{
+      transform: translateY(0);
+    }
+
+    .toggle{
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: 2px solid var(--border);
+      background: var(--card);
+      color: var(--fg);
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: .85rem;
+      transition: all .15s ease;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .toggle:hover{
+      transform: translateY(-1px);
+    }
+
+    .links{
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .links a{
+      color: var(--link);
+      text-decoration: none;
+      font-size: .9rem;
+      margin: 0 12px;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s ease;
+    }
+
+    .links a:hover{
+      border-bottom-color: var(--link);
+    }
+
+    @media (max-width: 640px){
+      h1{ font-size: 1.75rem; }
+      .card{ padding: 32px 24px; }
+      .cta{ padding: 14px 32px; font-size: 1rem; }
+      .toggle{ top: 10px; right: 10px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" id="themeToggle" type="button" aria-label="Cambiar modo">
+    Cambiar tema
+  </button>
+
+  <div class="container">
+    <div class="card">
+      <h1>Neodadaísmo y conversión cultural en la era de la IA generativa</h1>
+      
+      <p class="subtitle">Capítulo para el libro: Arte y educación en las áreas económico-administrativas</p>
+      
+      <p class="author">Jorge Cardiel Herrera</p>
+      <p class="institution">Facultad de Contaduría y Administración, UNAM</p>
+
+      <div class="notice">
+        📝 Muestra del avance en la escritura del capítulo
+      </div>
+
+      <a href="resumen_neodadaismo.html" class="cta">Ver resumen del capítulo →</a>
+
+      <div class="links">
+        <a href="https://github.com/socyb/ensayoArte" target="_blank" rel="noopener">GitHub</a>
+        <a href="resumen_neodadaismo.png" target="_blank">Ver diagrama</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById("themeToggle");
+      const STORAGE_KEY = "jc_theme";
+
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem(STORAGE_KEY, theme);
+        btn.textContent = theme === "dark" ? "Modo claro" : "Modo oscuro";
+      }
+
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "dark" || saved === "light") {
+        setTheme(saved);
+      } else {
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+
+      btn.addEventListener("click", () => {
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+</body>
+</html>
