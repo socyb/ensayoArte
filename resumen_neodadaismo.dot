@@ -1,0 +1,86 @@
+digraph ResumenNeodadaismo {
+  rankdir=TB;
+  splines=spline;
+  nodesep=0.25;
+  ranksep=0.3;
+  overlap=false;
+
+  graph [fontname="Helvetica", pad="0.2", concentrate=true];
+  node  [fontname="Helvetica", shape=box, style="rounded,filled", fillcolor="white", color="black", fontsize=10, margin="0.12,0.08"];
+  edge  [fontname="Helvetica", color="black", fontsize=9, penwidth=1.3];
+
+  // ====== CLUSTERS ======
+  subgraph cluster_0 {
+    label="Diagnóstico: dispositivo de conversión";
+    style="rounded,filled";
+    color="#4A90E2";
+    fillcolor="#E3F2FD";
+
+    A1 [label="Industria cultural contemporánea\n(IA generativa)"];
+    A2 [label="Dispositivo de conversión"];
+    A3 [label="Capital simbólico específico\n(conocimiento experto,\nsingularidad estética,\nsaber-hacer)"];
+    A4 [label="Valor de exposición\n(alcance, seguidores,\nengagement)"];
+    A5 [label="Sesgo hacia formatos\nalta circulación\n(hilos, listas, tutoriales,\n\"top 5\", plantillas)"];
+    A6 [label="Efectos:\nbanalización +\nestandarización"];
+
+    A1 -> A2;
+    A2 -> A3 [label="captura"];
+    A3 -> A4 [label="conversión"];
+    A2 -> A5 [label="privilegia"];
+    A5 -> A6 [label="favorece"];
+  }
+
+  subgraph cluster_1 {
+    label="Neodadaísmo: circulación y neutralización";
+    style="rounded,filled";
+    color="#E67E22";
+    fillcolor="#FFF3E0";
+
+    B1 [label="Gesto vanguardista\n(arte como interrupción)"];
+    B2 [label="Reconfiguración:\n\"contenido\" optimizado"];
+    B3 [label="Neodadaísmo mainstream\n(e.g. brainrot asistido por IA)"];
+    B4 [label="Contraste:\nDadá histórico =\ndesestabilización crítica"];
+    B5 [label="Neutralización:\nintegración al circuito\nde visibilidad"];
+
+    B1 -> B2;
+    B2 -> B3;
+    B4 -> B5;
+    B3 -> B5 [label="tiende a"];
+  }
+
+  subgraph cluster_2 {
+    label="Marco teórico";
+    style="rounded,filled";
+    color="#8E44AD";
+    fillcolor="#F3E5F5";
+
+    C1 [label="Walter Benjamin:\nvalor de exposición\n↔ experiencia estética\n↔ potencia política"];
+    C2 [label="Goffman + Luhmann:\nprogramas/marcos mediáticos\n→ estabilizan expectativas\n→ orientan sentido"];
+    C3 [label="Hans G. Moeller:\nperfilicidad\n(curaduría estratégica\nde perfiles)"];
+    C4 [label="Doctorow:\nenshittification\n(degradación sistémica)"];
+
+    C1 -> C2 [style=invis];
+    C2 -> C3 [style=invis];
+    C3 -> C4 [style=invis];
+  }
+
+  subgraph cluster_3 {
+    label="Aterrizaje en áreas económico-administrativas y docencia";
+    style="rounded,filled";
+    color="#27AE60";
+    fillcolor="#E8F5E9";
+
+    D1 [label="Gestión del\n\"dispositivo de la persona\""];
+    D2 [label="Acoplamiento a regímenes\nestéticos de exposición,\nevaluación y visibilidad"];
+    D3 [label="Implicaciones docentes"];
+    D4 [label="Alfabetización\n(técnica–mediática–estética)"];
+    D5 [label="Diseño de prácticas\nque no reduzcan\ncreatividad/pensamiento\n= \"contenido\" optimizado"];
+    D6 [label="Estrategias para no\nreproducir (o no reforzar)\nenshittification"];
+
+    D1 -> D2;
+    D2 -> D3;
+    D3 -> D4;
+    D3 -> D5;
+    D5 -> D6;
+  }
+}
