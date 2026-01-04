@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resumen — Neodadaísmo y conversión cultural (IA generativa)</title>
+  <style>
+    :root{
+      --bg:#fafafa;
+      --fg:#1a1a1a;
+      --muted:#666666;
+      --border:#2c2c2c;
+      --card:#ffffff;
+      --link:#0066cc;
+      --shadow: rgba(0,0,0,.06);
+      --accent-blue: #4A90E2;
+      --accent-orange: #E67E22;
+      --accent-purple: #8E44AD;
+      --accent-green: #27AE60;
+      --highlight-bg: #f5f5f5;
+    }
+    html[data-theme="dark"]{
+      --bg:#0d0d0d;
+      --fg:#e8e8e8;
+      --muted:#a8a8a8;
+      --border:#e8e8e8;
+      --card:#1a1a1a;
+      --link:#5ba3ff;
+      --shadow: rgba(255,255,255,.04);
+      --accent-blue: #6ba8ec;
+      --accent-orange: #ea9456;
+      --accent-purple: #a76bc5;
+      --accent-green: #4ec27d;
+      --highlight-bg: #252525;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .wrap{
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:20px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 3px solid var(--border);
+    }
+
+    h1{
+      font-size: 2rem;
+      margin: 0 0 12px 0;
+      letter-spacing: -.015em;
+      font-weight: 600;
+      line-height: 1.2;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .sub{
+      font-size: 1rem;
+      color: var(--muted);
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .toggle{
+      border: 2px solid var(--border);
+      background: var(--card);
+      color: var(--fg);
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      letter-spacing: .01em;
+      transition: all .15s ease;
+      min-width: 180px;
+      text-align:center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: .9rem;
+    }
+    .toggle:hover{ 
+      background: var(--highlight-bg);
+      transform: translateY(-1px);
+    }
+    .toggle:active{ transform: translateY(1px); }
+
+    .card{
+      border: 2px solid var(--border);
+      background: var(--card);
+      border-radius: 12px;
+      padding: 32px 32px 28px;
+      box-shadow: 0 4px 20px var(--shadow);
+      margin-bottom: 32px;
+    }
+
+    dl{
+      margin:0;
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap: 14px 24px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    dt{
+      font-weight: 600;
+      color: var(--fg);
+      font-size: .92rem;
+    }
+    dd{
+      margin:0;
+      color: var(--fg);
+      font-size: .92rem;
+    }
+
+    .divider{
+      height: 2px;
+      background: var(--border);
+      margin: 28px 0;
+      opacity: .25;
+    }
+
+    h2{
+      margin: 0 0 20px 0;
+      font-size: 1.5rem;
+      letter-spacing: -.01em;
+      font-weight: 600;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--accent-purple);
+    }
+
+    h3{
+      margin: 32px 0 16px 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--accent-blue);
+    }
+
+    p{
+      margin: 0 0 18px 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .concept-highlight{
+      position: relative;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    .concept-highlight.blue{ background: rgba(74, 144, 226, .12); }
+    .concept-highlight.orange{ background: rgba(230, 126, 34, .12); }
+    .concept-highlight.purple{ background: rgba(142, 68, 173, .12); }
+    .concept-highlight.green{ background: rgba(39, 174, 96, .12); }
+
+    .diagram-section{
+      margin-top: 48px;
+    }
+
+    .diagram-container{
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+
+    .diagram-container img,
+    .diagram-container svg{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .diagram-caption{
+      margin-top: 20px;
+      font-size: .9rem;
+      color: var(--muted);
+      font-style: italic;
+      text-align: center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    a{ 
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s ease;
+    }
+    a:hover{
+      border-bottom-color: var(--link);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal{
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      cursor: zoom-out;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .lightbox-modal.active{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox-modal img{
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+      animation: zoomIn 0.3s ease;
+    }
+
+    .lightbox-close{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+      transition: transform 0.2s ease;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-close:hover{
+      transform: scale(1.1);
+    }
+
+    .diagram-container img{
+      cursor: zoom-in;
+      transition: opacity 0.2s ease;
+    }
+
+    .diagram-container img:hover{
+      opacity: 0.9;
+    }
+
+    @keyframes fadeIn{
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn{
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px){
+      dl{ grid-template-columns: 1fr; }
+      header{ align-items: stretch; flex-direction: column; }
+      .toggle{ width: 100%; }
+      h1{ font-size: 1.65rem; }
+      .wrap{ padding: 24px 18px 60px; }
+      .card{ padding: 24px 20px 20px; }
+      p{ text-align: left; }
+    }
+
+    /* Print */
+    @media print{
+      .toggle{ display:none; }
+      body{ background:#fff; color:#000; }
+      .card{ box-shadow:none; border: 1px solid #000; }
+      p{ text-align: justify; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Neodadaísmo y conversión cultural en la era de la IA generativa</h1>
+        <p class="sub">Resumen de capítulo — Arte y educación en las áreas económico-administrativas</p>
+      </div>
+      <button class="toggle" id="themeToggle" type="button" aria-label="Cambiar modo">
+        Cambiar a modo oscuro
+      </button>
+    </header>
+
+    <section class="card" aria-label="Ficha del capítulo">
+      <dl>
+        <dt>Capítulo para el libro</dt>
+        <dd>Arte y educación en las áreas económico-administrativas</dd>
+
+        <dt>Coordinadores</dt>
+        <dd>Claudia Liliana Padrón Martínez y José Alberto García Narváez</dd>
+
+        <dt>Título del capítulo</dt>
+        <dd>Neodadaísmo y conversión cultural en la era de la IA generativa</dd>
+
+        <dt>Autor(es)</dt>
+        <dd>Jorge Cardiel Herrera</dd>
+
+        <dt>Adscripción institucional</dt>
+        <dd>Facultad de Contaduría y Administración, UNAM</dd>
+
+        <dt>Correo</dt>
+        <dd><a href="mailto:jorgecardiel@comunidad.unam.mx">jorgecardiel@comunidad.unam.mx</a></dd>
+
+        <dt>ORCID</dt>
+        <dd>[pendiente]</dd>
+      </dl>
+
+      <div class="divider"></div>
+
+      <h2>Resumen</h2>
+
+      <p>
+        La <span class="concept-highlight blue">industria cultural contemporánea</span>, impulsada actualmente por herramientas de inteligencia artificial generativa,
+        opera como un <span class="concept-highlight blue">dispositivo de conversión</span>. En él, formas de capital simbólico específico —como el conocimiento experto,
+        la singularidad estética y el saber-hacer, propios de campos como el arte, la crítica o la investigación— son transformadas
+        en <span class="concept-highlight blue">valor de exposición</span>, medido a través de métricas de visibilidad como el alcance, el número de seguidores o el engagement.
+        Esta operación de captura y reorientación no es neutral: tiende a privilegiar formatos de rápida circulación —por ejemplo,
+        hilos, listas, tutoriales, top 5 o plantillas—, lo que favorece la banalización de los contenidos y la estandarización de las formas.
+      </p>
+
+      <p>
+        En este tránsito, el <span class="concept-highlight orange">gesto vanguardista</span>, históricamente inscrito en el sistema del arte como interrupción crítica del sentido,
+        se reconfigura como "contenido" optimizado para plataformas. Gestos característicos de las vanguardias históricas del siglo XX
+        circulan hoy de manera masiva en esferas mainstream; un caso paradigmático es el <span class="concept-highlight orange">neodadaísmo contemporáneo</span>, visible en tendencias
+        auxiliadas por IA como el <em>brainrot</em>. Sin embargo, a diferencia del Dadá histórico, cuyo potencial residía en la desestabilización del
+        marco estético y político, estas reapropiaciones algorítmicas tienden a <span class="concept-highlight orange">neutralizar su potencia crítica</span> al integrarse plenamente en el
+        circuito de la visibilidad.
+      </p>
+
+      <p>
+        El capítulo propone analizar esta dinámica a partir de una reflexión sobre la época del vanguardismo histórico —en particular,
+        la emergencia del dadaísmo— y sobre el concepto de <span class="concept-highlight purple">"valor de exposición"</span>. En diálogo con <span class="concept-highlight purple">Walter Benjamin</span>, se examina cómo la expansión
+        de dicho valor reconfigura la experiencia estética y debilita su potencia política. Con <span class="concept-highlight purple">Erving Goffman y Niklas Luhmann</span>, se analiza el
+        papel de los programas mediáticos que enmarcan la percepción, estabilizan expectativas y orientan la producción de sentido. Finalmente,
+        a partir de <span class="concept-highlight purple">Hans Georg Moeller</span>, se interpreta el desplazamiento desde el ideal moderno de autenticidad hacia la <span class="concept-highlight purple">profilicidad</span>, entendida
+        como una forma de organización de la identidad basada en la curaduría estratégica de perfiles públicos.
+      </p>
+
+      <p>
+        Esta última argumentación se orienta hacia las <span class="concept-highlight green">áreas económico-administrativas</span>, mostrando cómo la gestión contemporánea del "dispositivo de la persona"
+        se acopla crecientemente a regímenes estéticos de exposición, evaluación y visibilidad. El capítulo concluye con algunas <span class="concept-highlight green">implicaciones para la docencia</span>,
+        proponiendo estrategias para fomentar una <span class="concept-highlight green">alfabetización técnica, mediática y estética</span>, así como prácticas formativas que eviten reducir la creatividad,
+        el pensamiento crítico y el conocimiento a meros "contenidos" optimizados para plataformas. En este sentido, se plantean líneas de acción para no reproducir
+        —o al menos no reforzar— los procesos de <span class="concept-highlight purple"><em>enshittification</em></span>, como ha denominado <span class="concept-highlight purple">Cory Doctorow</span> a esta degradación sistémica de los entornos digitales, en el
+        contexto de la IA generativa.
+      </p>
+    </section>
+
+    <section class="diagram-section">
+      <h3>Esquema conceptual del capítulo</h3>
+      <div class="diagram-container">
+        <img id="diagramImage" src="resumen_neodadaismo.svg" alt="Diagrama conceptual: Neodadaísmo y conversión cultural en la era de la IA generativa" />
+        <p class="diagram-caption">
+          Figura 1. Estructura conceptual del argumento: desde el diagnóstico del dispositivo de conversión hasta las implicaciones en docencia y gestión (haz clic para ampliar)
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById("themeToggle");
+      const STORAGE_KEY = "jc_theme";
+
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem(STORAGE_KEY, theme);
+        btn.textContent = theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+      }
+
+      // Init: saved preference > system preference > light
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "dark" || saved === "light") {
+        setTheme(saved);
+      } else {
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+
+      btn.addEventListener("click", () => {
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+
+      // Lightbox functionality
+      const diagramImg = document.getElementById("diagramImage");
+      const modal = document.getElementById("lightboxModal");
+      const lightboxImg = document.getElementById("lightboxImage");
+      const closeBtn = document.querySelector(".lightbox-close");
+
+      diagramImg.addEventListener("click", () => {
+        modal.classList.add("active");
+        lightboxImg.src = diagramImg.src;
+        document.body.style.overflow = "hidden";
+      });
+
+      const closeLightbox = () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      };
+
+      closeBtn.addEventListener("click", closeLightbox);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
