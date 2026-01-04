@@ -17,6 +17,8 @@
 
 # PDFs
 PDFs/
+NORMAS*.pdf
+*NORMAS*.pdf
 
 # Otros archivos HTML/Markdown de trabajo
 ensayo-progreso-enero-2026.html
