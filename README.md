@@ -4,6 +4,8 @@
 **Autor:** Jorge Cardiel Herrera  
 **Institución:** Facultad de Contaduría y Administración, UNAM
 
+> **Nota:** Este repositorio contiene una muestra del avance en la escritura del capítulo, no el capítulo completo.
+
 ## Descripción
 
 Este repositorio contiene el capítulo académico que analiza cómo la industria cultural contemporánea, impulsada por herramientas de inteligencia artificial generativa, opera como un dispositivo de conversión que transforma el capital simbólico específico (conocimiento experto, singularidad estética, saber-hacer) en valor de exposición medible a través de métricas de visibilidad.
