@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Archivos temporales de Office
+~$*.docx
+~$*.xlsx
+
+# Archivos dot (fuente de diagramas)
+*.dot
+
+# SVG (generados, mantener solo PNG)
+*.svg
+
+# PDFs
+PDFs/
+
+# Otros archivos HTML/Markdown de trabajo
+ensayo-progreso-enero-2026.html
+instagentrificacion.html
+instagentrificacion.md
+instagentrificacion_files/
+progreso-ensayo.html
+
+# Mapas específicos
+mapa1-mini.*
+mapa1-simple.*
+mapa1.dot
+mapa1.svg
+mapa1_new.png
