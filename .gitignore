@@ -5,6 +5,10 @@
 ~$*.docx
 ~$*.xlsx
 
+# Archivos Word
+*.docx
+*.doc
+
 # Archivos dot (fuente de diagramas)
 *.dot
 
