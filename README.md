@@ -8,7 +8,7 @@
 
 ## Descripción
 
-Este repositorio contiene el capítulo académico que analiza cómo la industria cultural contemporánea, impulsada por herramientas de inteligencia artificial generativa, opera como un dispositivo de conversión que transforma el capital simbólico específico (conocimiento experto, singularidad estética, saber-hacer) en valor de exposición medible a través de métricas de visibilidad.
+Este repositorio contiene muestras del capítulo académico que analiza cómo la industria cultural contemporánea, impulsada por herramientas de inteligencia artificial generativa, opera como un dispositivo de conversión que transforma el capital simbólico específico (conocimiento experto, singularidad estética, saber-hacer) en valor de exposición medible a través de métricas de visibilidad.
 
 ## Contenido
 
