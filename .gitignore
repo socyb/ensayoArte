@@ -1,2 +1,16 @@
 # macOS
 .DS_Store
+.venv/
+__pycache__/
+~$*.docx
+
+# Material de trabajo no necesario para la versión web
+manuscrito/
+notas/
+scripts/
+investigacion/*
+!investigacion/reportes/
+!investigacion/reportes/youtube_video_report.html
+
+# Fuente editable del diagrama, no necesaria para lectura web
+visualizaciones/*.dot
