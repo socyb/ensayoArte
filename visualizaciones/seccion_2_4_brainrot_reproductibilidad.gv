@@ -1,0 +1,50 @@
+digraph EsquemaBrainrotReproductibilidad {
+  rankdir=TB;
+  newrank=true;
+  splines=polyline;
+  nodesep=0.22;
+  ranksep=0.42;
+  overlap=false;
+
+  graph [fontname="Helvetica", pad="0.12", bgcolor="white", ordering="out"];
+  node  [fontname="Helvetica", shape=box, style="rounded,filled", color="black", fillcolor="white", fontsize=9, margin="0.11,0.06"];
+  edge  [fontname="Helvetica", color="black", fontsize=8, penwidth=1.2];
+
+  A1 [label="Dadá 1916\n(gesto precede\nal aparato)", group="g1"];
+  A2 [label="Brainrot 2023-\n(gesto nace dentro\ndel aparato)", group="g2"];
+  A3 [label="Producción\nAI generativa\n(sin original)", group="g3"];
+  A4 [label="Circuito de\ncaptura algorítmica\n(plataforma)", group="g4"];
+  A5 [label="Régimen de VE\n(CE tiende a cero;\nlógica de exposición)", group="g5"];
+  A6 [label="Transición:\nde gestos a sujetos\n(profilicidad)", group="g6"];
+
+  B1 [label="Benjamin:\nDadá anticipa el cine\n(p. 89)", group="g1"];
+  B2 [label="Owens: género de\nparticipación;\nanti-gratificación", group="g2"];
+  B3 [label="Lovink et al.:\nIA como máquina\nde memes", group="g3"];
+  B4 [label="Giblin-Doctorow:\ncultura capturada;\nAdorno: repetición", group="g4"];
+  B5 [label="Rosa:\nresonancia\nindisponible", group="g5"];
+
+  { rank=same; A1; A2; A3; A4; A5; A6; }
+  { rank=same; B1; B2; B3; B4; B5; }
+
+  A1 -> A2 [label="inversión:\nya no precede", constraint=false];
+  A2 -> A3 [label="intensificado por", constraint=false];
+  A3 -> A4 [label="alojado en", constraint=false];
+  A4 -> A5 [label="convierte en", constraint=false];
+  A5 -> A6 [label="abre paso a", constraint=false];
+
+  A1 -> B1 [style=dashed, arrowhead=none];
+  A2 -> B2 [style=dashed, arrowhead=none];
+  A3 -> B3 [style=dashed, arrowhead=none];
+  A4 -> B4 [style=dashed, arrowhead=none];
+  A5 -> B5 [style=dashed, arrowhead=none];
+
+  A1 -> A2 [style=invis, weight=30];
+  A2 -> A3 [style=invis, weight=30];
+  A3 -> A4 [style=invis, weight=30];
+  A4 -> A5 [style=invis, weight=30];
+  A5 -> A6 [style=invis, weight=30];
+  B1 -> B2 [style=invis, weight=20];
+  B2 -> B3 [style=invis, weight=20];
+  B3 -> B4 [style=invis, weight=20];
+  B4 -> B5 [style=invis, weight=20];
+}

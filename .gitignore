@@ -8,9 +8,12 @@ __pycache__/
 manuscrito/
 notas/
 scripts/
+suscitaciones/
 investigacion/*
 !investigacion/reportes/
 !investigacion/reportes/youtube_video_report.html
+brainrot/
+screenshots/
 
 # Fuente editable del diagrama, no necesaria para lectura web
 visualizaciones/*.dot
