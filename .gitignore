@@ -4,16 +4,20 @@
 __pycache__/
 ~$*.docx
 
-# Material de trabajo no necesario para la versión web
+# Material de trabajo no necesario para la versión web (GitHub Pages)
 manuscrito/
 notas/
 scripts/
 suscitaciones/
-investigacion/*
-!investigacion/reportes/
-!investigacion/reportes/youtube_video_report.html
 brainrot/
 screenshots/
+.claude/
 
-# Fuente editable del diagrama, no necesaria para lectura web
-visualizaciones/*.dot
+# Fuentes PDF, datos de investigación (archivos pesados, no necesarios para la web)
+investigacion/fuentes_pdf/
+investigacion/data/
+investigacion/videos/
+
+# Visualizaciones: solo SVGs y HTML para la web; excluir fuentes editables y PNGs pesados
+visualizaciones/*.gv
+visualizaciones/*.png
